@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mão que Transforma</title>
+  <meta name="description" content="ONG que conecta voluntários, doadores e comunidades para transformar realidades.">
+  <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#/" data-link><img class="logo__img" src="imagens/favicon.svg" alt="" width="32" height="32">Mão que Transforma</a>
+      <input type="checkbox" id="menu-toggle" class="header__toggle" aria-label="Abrir menu">
+      <label for="menu-toggle" class="header__burger" aria-hidden="true"><span></span></label>
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#/projetos" data-link>Projetos</a></li>
+          <li><a class="nav__link" href="#/impacto" data-link>Impacto</a></li>
+          <li><a class="nav__link" href="#/participe" data-link>Participe</a></li>
+          <li><a class="btn btn--small" href="#" data-modal-open="modal-doar">Doar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Mão que Transforma</p>
+      <p>contato@maoquetransforma.org</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal-doar" aria-labelledby="modal-doar-title">
+    <div class="modal__header">
+      <span class="fb-icon badge--success" aria-hidden="true">♥</span>
+      <h2 class="modal__title" id="modal-doar-title">Fazer uma doação</h2>
+      <button class="modal__close" type="button" data-modal-close aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal__body">
+      <p>Escolha um valor. Cada real vira aula, prato ou ferramenta.</p>
+      <div class="amounts" role="radiogroup" aria-label="Valor da doação">
+        <label><input type="radio" name="valor" value="25" checked>R$ 25</label>
+        <label><input type="radio" name="valor" value="50">R$ 50</label>
+        <label><input type="radio" name="valor" value="100">R$ 100</label>
+      </div>
+      <span class="badge badge--info">Doação única</span>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--ghost" type="button" data-modal-close>Cancelar</button>
+      <button class="btn" type="button" data-modal-close onclick="Feedback.toast('success','Doação registrada','Obrigado! O recibo foi enviado ao seu e-mail.')">Confirmar doação</button>
+    </div>
+  </dialog>
+
+  <script src="js/feedback.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/validacao.js"></script>
+  <script src="js/inscricoes.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
